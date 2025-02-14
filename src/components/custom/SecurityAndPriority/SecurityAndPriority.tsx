@@ -36,7 +36,7 @@ const securityData = [
 
 const SecurityAndPriority = () => {
   return (
-      <div className="w-11/12 md:w-10/12 mx-auto py-10">
+      <div className="w-11/12 md:w-10/12 mx-auto py-5 md:py-20">
          {/* security and priority  Hading */}
          <div>
           <h1 className="text-center font-semibold text-base md:text-4xl  text-[#C0C0C0] pb-4 md:pb-6">
