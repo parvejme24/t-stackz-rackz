@@ -14,7 +14,7 @@ export default function footer() {
                 T-Stackz Rackz
               </h4>
             </div>
-            <h5 className="text-[#00F5FF] text-2xl font-bold">
+            <h5 className="text-[#00F5FF] text-xl md:text-2xl font-bold">
               Unleash Your Trading Power
             </h5>
             <ul className="flex gap-4 items-center">

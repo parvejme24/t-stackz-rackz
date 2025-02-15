@@ -39,7 +39,7 @@ const faqs = [
 export default function FAQSection() {
   return (
     <div className=" md:bg-gradient-to-br from-[#0D1515] to-[#0C1B1B]">
-    <div className="w-11/12 md:w-10/12 mx-auto py-5 md:py-20">
+    <div className="container mx-auto max-w-7xl px-6 py-5 md:py-20">
       <h1 className="text-center font-semibold text-base md:text-4xl pb-6 md:pb-10 text-[#C0C0C0]">
         Frequently Asked Questions
       </h1>
