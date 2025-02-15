@@ -1,6 +1,7 @@
 import AboutTrading from "@/components/custom/AboutTrading/AboutTrading";
 import Banner from "@/components/custom/Banner/Banner";
 import FAQ from "@/components/custom/FAQ/FAQ";
+import LiveMarket from "@/components/custom/LiveMarket/LiveMarket";
 import MarketTred from "@/components/custom/MarketTred/MarketTred";
 import PrivacyPolicy from "@/components/custom/PrivacyPolicy/PrivacyPolicy";
 import SecurityAndPriority from "@/components/custom/SecurityAndPriority/SecurityAndPriority";
@@ -13,6 +14,7 @@ export default function IndexPage() {
       <div>
         <Banner />
         <MarketTred />
+        <LiveMarket />
         <SuccessStories />
         <AboutTrading />
         <FAQ />
