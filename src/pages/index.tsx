@@ -7,6 +7,7 @@ import PrivacyPolicy from "@/components/custom/PrivacyPolicy/PrivacyPolicy";
 import SecurityAndPriority from "@/components/custom/SecurityAndPriority/SecurityAndPriority";
 import SuccessStories from "@/components/custom/SuccessStroies/SuccessStories";
 import TradeSmartLiveFast from "@/components/custom/TradeSmartLiveFast/TradeSmartLiveFast";
+import WhyChoose from "@/components/custom/WhyChoose/WhyChoose";
 import DefaultLayout from "@/layouts/default";
 
 export default function IndexPage() {
@@ -15,6 +16,7 @@ export default function IndexPage() {
       <div>
         <Banner />
         <MarketTred />
+        <WhyChoose />
         <LiveMarket />
         <SuccessStories />
         <AboutTrading />
