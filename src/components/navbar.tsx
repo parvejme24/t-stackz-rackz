@@ -26,7 +26,7 @@ export const Navbar = () => {
         <Link
           className={clsx(
             linkStyles({ color: "foreground" }),
-            "data-[active=true]:text-primary data-[active=true]:font-medium text-sm font-light"
+            "data-[active=true]:text-primary data-[active=true]:font-medium text-md font-semibold text-[#C0C0C0]"
           )}
           color="foreground"
           href={item.href}
@@ -60,8 +60,7 @@ export const Navbar = () => {
     <HeroUINavbar
       maxWidth="xl"
       position="sticky"
-      className="bg-[#151A18]"
-      // className=" bg-transparent dark:bg-[#5021AF]"
+      className="bg-[#151A18] top-0"
       style={
         theme === "dark"
           ? {
@@ -83,7 +82,7 @@ export const Navbar = () => {
           >
             {/* <Logo /> */}
             <img src="/images/logo.png" alt="" />
-            <h4 className="font-bold text-[##C0C0C0] ml-2">T-Stackz Rackz</h4>
+            <h4 className="font-bold text-[#C0C0C0] ml-2">T-Stackz Rackz</h4>
           </Link>
         </NavbarBrand>
       </NavbarContent>
@@ -107,8 +106,8 @@ export const Navbar = () => {
           <Button
             isExternal
             as={Link}
-            className="text-sm font-normal bg-gradient-to-r from-[#B12533] to-[#CA4250]"
-            href="/login"
+            className="text-sm font-normal text-[#d8d7d7] bg-gradient-to-r from-[#B12533] to-[#CA4250]"
+            href="/"
             variant="flat"
           >
             Join Now

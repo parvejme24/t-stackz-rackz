@@ -1,28 +1,28 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Vite + HeroUI",
+  name: "T-Stackz Rackz",
   description: "Make beautiful websites regardless of your design experience.",
   navItems: [
     {
       label: "Home",
-      href: "/",
+      href: "#home",
     },
     {
       label: "Features",
-      href: "/docs",
+      href: "#features",
     },
     {
       label: "Live Market",
-      href: "/pricing",
+      href: "#liveMarket",
     },
     {
       label: "Education",
-      href: "/blog",
+      href: "#education",
     },
     {
       label: "Testimonials",
-      href: "/about",
+      href: "#testimonials",
     },
   ],
   navMenuItems: [
