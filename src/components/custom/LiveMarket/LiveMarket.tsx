@@ -100,7 +100,7 @@ export default function LiveMarket() {
   );
 
   return (
-    <div className="bg-[#131313] py-20 text-white">
+    <div id="liveMarket" className="bg-[#131313] py-20 text-white">
       <div className="container mx-auto max-w-7xl px-6">
         <h3 className="text-[#C0C0C0] font-bold text-2xl text-center">
           Live Market
@@ -110,7 +110,7 @@ export default function LiveMarket() {
         </p>
 
         {/* Categories and Search */}
-        <div className="flex justify-between items-center mb-4">
+        <div className="flex justify-between items-center flex-wrap gap-7 mb-4">
           <ul className="flex items-center flex-wrap gap-2 space-x-3">
             {(showAllCategories ? categories : categories.slice(0, 5)).map(
               (category) => (
@@ -163,7 +163,10 @@ export default function LiveMarket() {
         ) : (
           <div className="mt-5">
             {/* Table */}
-            <Table aria-label="Live Cryptocurrency Prices">
+            <Table
+              className="bg-[#0D0D0D]"
+              aria-label="Live Cryptocurrency Prices"
+            >
               <TableHeader>
                 <TableColumn>NO</TableColumn>
                 <TableColumn>NAME</TableColumn>
@@ -218,6 +221,7 @@ export default function LiveMarket() {
                   total={totalPages}
                   currentPage={currentPage}
                   onChange={setCurrentPage}
+                  color="danger"
                 />
               </div>
             )}

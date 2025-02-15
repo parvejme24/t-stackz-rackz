@@ -3,6 +3,7 @@ import { GoArrowRight } from "react-icons/go";
 export default function Banner() {
   return (
     <div
+      id="home"
       className="text- md:text-center bg-cover bg-center bg-no-repeat min-h-screen flex flex-col items-center justify-center px-6 space-y-8"
       style={{ backgroundImage: "url('/images/banner-bg.png')" }}
     >
