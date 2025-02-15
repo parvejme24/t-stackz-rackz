@@ -1,12 +1,4 @@
 import { useEffect, useState } from "react";
-import {
-  Table,
-  TableHeader,
-  TableBody,
-  TableColumn,
-  TableRow,
-  TableCell,
-} from "@heroui/table";
 import { Pagination } from "@heroui/pagination";
 import { IoSearchOutline } from "react-icons/io5";
 import CoinTable from "@/components/Skeleton/CoinTable";
@@ -106,13 +98,13 @@ export default function LiveMarket() {
         <h3 className="text-[#C0C0C0] font-bold text-2xl text-center">
           Live Market
         </h3>
-        <p className="text-[#C0C0C0] font-semibold text-xl mb-6">
+        <p className="text-[#C0C0C0] font-semibold text-xl mb-6 text-center md:text-left">
           Cryptocurrency Prices
         </p>
 
         {/* Categories and Search */}
         <div className="flex justify-between items-center flex-wrap gap-7 mb-4">
-          <ul className="flex items-center flex-wrap gap-2 space-x-3">
+          <ul className="flex justify-center md:justify-start items-center flex-wrap gap-2 space-x-3">
             {(showAllCategories ? categories : categories.slice(0, 5)).map(
               (category) => (
                 <li key={category}>
@@ -144,7 +136,7 @@ export default function LiveMarket() {
             )}
           </ul>
 
-          <div className="flex items-center border border-[#00F5FF] rounded-lg pl-2 py-1">
+          <div className="flex mx-auto md:mx-0 items-center border border-[#00F5FF] rounded-lg pl-2 py-1">
             <IoSearchOutline className="text-2xl text-[#00F5FF]" />
             <input
               type="text"
@@ -164,52 +156,60 @@ export default function LiveMarket() {
         ) : (
           <div className="mt-5">
             {/* Table */}
-            <Table className="bg-black" aria-label="Live Cryptocurrency Prices">
-              <TableHeader>
-                <TableColumn>NO</TableColumn>
-                <TableColumn>NAME</TableColumn>
-                <TableColumn>LAST PRICE (USD)</TableColumn>
-                <TableColumn>CHANGE (24H)</TableColumn>
-                <TableColumn>MARKET CAP (USD)</TableColumn>
-                <TableColumn>TRADE</TableColumn>
-              </TableHeader>
-              <TableBody>
-                {displayedCoins.map((coin, index) => (
-                  <TableRow key={coin.code}>
-                    <TableCell>
-                      {(currentPage - 1) * itemsPerPage + index + 1}
-                    </TableCell>
-                    <TableCell className="flex items-center gap-3">
-                      <img
-                        src={coin.png64 || ""}
-                        alt={coin.name}
-                        className="w-6 h-6"
-                      />
-                      {coin.name} ({coin.code})
-                    </TableCell>
-                    <TableCell>${coin.rate.toFixed(2)}</TableCell>
-                    <TableCell
-                      className={
-                        coin.delta.day > 0 ? "text-green-500" : "text-red-500"
-                      }
-                    >
-                      {(coin.delta.day * 100 - 100).toFixed(2)}%
-                    </TableCell>
-                    <TableCell>${coin.cap.toLocaleString()}</TableCell>
-                    <TableCell>
-                      <Link
-                        to={`https://www.livecoinwatch.com/price/${coin.name}-${coin.code}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="bg-[#00F5FF] hover:bg-transparent border border-[#00F5FF] text-[#0D0D0D] duration-300 hover:text-[#00F5FF]  px-4 py-1 rounded-md font-semibold"
+            <div className="mt-5 overflow-x-auto">
+              <table className="bg-[#0D0D0D] w-full text-sm md:text-base text-left border-collapse rounded-lg">
+                <thead className="bg-[#0D0D0D] text-white">
+                  <tr>
+                    <th className="p-2 md:p-3">NO</th>
+                    <th className="p-2 md:p-3">NAME</th>
+                    <th className="p-2 md:p-3">LAST PRICE (USD)</th>
+                    <th className="p-2 md:p-3">CHANGE (24H)</th>
+                    <th className="p-2 md:p-3 hidden md:table-cell">
+                      MARKET CAP (USD)
+                    </th>
+                    <th className="p-2 md:p-3 hidden md:table-cell">TRADE</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {displayedCoins.map((coin, index) => (
+                    <tr key={coin.code} className="border-b border-gray-700">
+                      <td className="p-2 md:p-3">
+                        {(currentPage - 1) * itemsPerPage + index + 1}
+                      </td>
+                      <td className="p-2 md:p-3 flex items-center gap-2">
+                        <img
+                          src={coin.png64 || ""}
+                          alt={coin.name}
+                          className="w-6 h-6"
+                        />
+                        {coin.name} ({coin.code})
+                      </td>
+                      <td className="p-2 md:p-3">${coin.rate.toFixed(2)}</td>
+                      <td
+                        className={`p-2 md:p-3 font-semibold ${
+                          coin.delta.day > 0 ? "text-green-500" : "text-red-500"
+                        }`}
                       >
-                        Trade
-                      </Link>
-                    </TableCell>
-                  </TableRow>
-                ))}
-              </TableBody>
-            </Table>
+                        {(coin.delta.day * 100 - 100).toFixed(2)}%
+                      </td>
+                      <td className="p-2 md:p-3 hidden md:table-cell">
+                        ${coin.cap.toLocaleString()}
+                      </td>
+                      <td className="p-2 md:p-3 hidden md:table-cell">
+                        <Link
+                          to={`https://www.livecoinwatch.com/price/${coin.name}-${coin.code}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="bg-[#00F5FF] hover:bg-transparent border border-[#00F5FF] text-[#0D0D0D] duration-300 hover:text-[#00F5FF] px-3 py-1 rounded-md font-semibold"
+                        >
+                          Trade
+                        </Link>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
 
             {/* Pagination */}
             {filteredCoins.length > itemsPerPage && (
@@ -225,6 +225,8 @@ export default function LiveMarket() {
             )}
           </div>
         )}
+
+        <p className="text-center text-white">{displayedCoins.length < 0 ? "No coins found" : ""}</p>
       </div>
     </div>
   );

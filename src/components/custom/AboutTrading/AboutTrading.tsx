@@ -3,25 +3,25 @@ import AboutTradingCard from "./AboutTradingCard";
 
 const cards = [
   {
-    image: "../../../../public/Article_Image.png",
+    image: "/public/images/b1.png",
     title: "Basic Trading For Beginners",
-    authorImage: "../../../../public/Ellipse 80.png",
+    authorImage: '/public/images/user_profile.png',
     authorName: "Dasteen",
     date: "Jan 10, 2022",
     readTime: "3 Min Read",
   },
   {
-    image: "../../../../public/Article_Image (1).png",
+    image: "/public/images/b2.png",
     title: "Start Earning From Trading",
-    authorImage: "../../../../public/Ellipse 80.png",
+   authorImage: '/public/images/user_profile.png',
     authorName: "Dasteen",
     date: "Jan 10, 2022",
     readTime: "3 Min Read",
   },
   {
-    image: "../../../../public/Article_Image (2).png",
+    image: "/public/images/b3.png",
     title: "How To Become A Pro Trader",
-    authorImage: "../../../../public/Ellipse 80.png",
+    authorImage: '/public/images/user_profile.png',
     authorName: "Dasteen",
     date: "Jan 10, 2022",
     readTime: "3 Min Read",
@@ -36,11 +36,7 @@ export default function AboutTrading() {
           Learn About Trading
         </h1>
         <div className="pb-6 md:pb-10 grid grid-cols-1 md:grid-cols-2 gap-5">
-          <img
-            className="w-full"
-            src="../../../../public/Rectangle 20.png"
-            alt=""
-          />
+          <img className="w-full" src="/public/images/about.png" alt="" />
           <div className="flex-1">
             <h1 className="font-medium text-xl lg:text-3xl text-[#00F5FF] pb-3 lg:pb-6">
               Master the Markets: Trade Smarter with T-Stackz Rackz
