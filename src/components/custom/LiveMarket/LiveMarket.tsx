@@ -11,7 +11,7 @@ import { Pagination } from "@heroui/pagination";
 import { IoSearchOutline } from "react-icons/io5";
 import CoinTable from "@/components/Skeleton/CoinTable";
 
-const API_KEY = "6b443581-0d45-47ec-affa-340ea4d46c30";
+const API_KEY = import.meta.env.VITE_LIVECOINWATCH_API_KEY;
 const API_URL = "https://api.livecoinwatch.com/coins/list";
 
 interface Coin {
