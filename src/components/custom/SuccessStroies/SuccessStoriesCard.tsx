@@ -1,21 +1,18 @@
-import React from "react";
-
-// Define the interface for the props
 interface SuccessStoriesCardProps {
   name: string;
-  image?: string; // Optional prop
+  image?: string;
   profilePic: string;
   text: string;
 }
 
-const SuccessStoriesCard: React.FC<SuccessStoriesCardProps> = ({
+export default function SuccessStoriesCard({
   name,
   image,
   profilePic,
   text,
-}) => {
+}: SuccessStoriesCardProps) {
   return (
-    <div className="bg-[#222629] rounded-xl md:rounded-3xl  p-3 m:p-4  text-white  md:shadow-lg ">
+    <div className="bg-[#222629] rounded-xl md:rounded-3xl p-3 md:p-4 text-white md:shadow-lg">
       {/* Profile Section */}
       <div className="flex items-center gap-3">
         <img
@@ -23,13 +20,13 @@ const SuccessStoriesCard: React.FC<SuccessStoriesCardProps> = ({
           alt={name}
           className="w-8 md:w-12 h-8 md:h-12 rounded-full object-cover"
         />
-        <h3 className=" text-sm md:text-lg font-semibold text-cyan-400">
+        <h3 className="text-sm md:text-lg font-semibold text-cyan-400">
           {name}
         </h3>
       </div>
 
       {/* Conditional Rendering for Image */}
-      {image ? (
+      {image && (
         <div className="mt-3">
           <img
             src={image}
@@ -37,14 +34,10 @@ const SuccessStoriesCard: React.FC<SuccessStoriesCardProps> = ({
             className="w-full h-20 md:h-40 object-cover rounded-xl"
           />
         </div>
-      ) : (
-        ""
       )}
 
       {/* Text Section */}
-      <p className=" mt-2 md:mt-3 text-xs md:text-sm text-gray-300">{text}</p>
+      <p className="mt-2 md:mt-3 text-xs md:text-sm text-gray-300">{text}</p>
     </div>
   );
-};
-
-export default SuccessStoriesCard;
+}

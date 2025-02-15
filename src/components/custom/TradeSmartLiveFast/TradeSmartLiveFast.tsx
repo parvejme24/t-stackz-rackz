@@ -16,7 +16,7 @@ export default function TradeSmartLiveFast() {
           </h1>
           {/* Image */}
           <img
-            src="../../../../public/pngegg (7) 1.png"
+            src="/public/images/car.png"
             alt="Smart Trading"
             className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[80%] sm:max-w-lg md:max-w-xl lg:max-w-4xl"
           />
