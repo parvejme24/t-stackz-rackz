@@ -33,7 +33,7 @@ const AboutTrading = () => {
   ];
 
   return (
-    <div className="w-11/12 md:w-10/12 mx-auto py-5 md:py-20">
+    <div className="container mx-auto max-w-7xl px-6 py-5 md:py-20">
      <h1 className="text-center font-semibold text-base md:text-4xl pb-6 md:pb-10 text-[#C0C0C0]">
      Learn About Trading
       </h1>
