@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { MdArrowOutward } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const API_KEY = import.meta.env.VITE_LIVECOINWATCH_API_KEY;
 const API_URL = "https://api.livecoinwatch.com/coins/list";
@@ -51,8 +52,8 @@ export default function MarketTred() {
   }, []);
 
   return (
-    <div className="bg-[#0D0D0D]">
-      <div className="container mx-auto max-w-7xl px-6 py-5 md:py-20">
+    <div className="bg-[#0D0D0D] border-y border-[#222629]">
+      <div className="container mx-auto max-w-7xl px-6 py-5 md:py-16">
         <h3 className="text-center font-semibold text-base md:text-4xl text-[#C0C0C0] pb-4 md:pb-6">
           Market Trend
         </h3>
@@ -80,7 +81,13 @@ export default function MarketTred() {
                       {name}
                     </p>
                   </div>
-                  <MdArrowOutward className="text-[#00F5FF] text-4xl rounded-full p-2 bg-[#25282B]" />
+
+                  <Link
+                    to={`https://www.livecoinwatch.com/price/${name}-${code}`}
+                    target="_blank"
+                  >
+                    <MdArrowOutward className="text-[#00F5FF] text-4xl rounded-full p-2 bg-[#25282B]" />
+                  </Link>
                 </div>
 
                 <div className="border-2 border-[#25282B]"></div>

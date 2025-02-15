@@ -10,6 +10,7 @@ import {
 import { Pagination } from "@heroui/pagination";
 import { IoSearchOutline } from "react-icons/io5";
 import CoinTable from "@/components/Skeleton/CoinTable";
+import { Link } from "react-router-dom";
 
 const API_KEY = import.meta.env.VITE_LIVECOINWATCH_API_KEY;
 const API_URL = "https://api.livecoinwatch.com/coins/list";
@@ -163,10 +164,7 @@ export default function LiveMarket() {
         ) : (
           <div className="mt-5">
             {/* Table */}
-            <Table
-              className="bg-[#0D0D0D]"
-              aria-label="Live Cryptocurrency Prices"
-            >
+            <Table className="bg-black" aria-label="Live Cryptocurrency Prices">
               <TableHeader>
                 <TableColumn>NO</TableColumn>
                 <TableColumn>NAME</TableColumn>
@@ -199,14 +197,14 @@ export default function LiveMarket() {
                     </TableCell>
                     <TableCell>${coin.cap.toLocaleString()}</TableCell>
                     <TableCell>
-                      <a
-                        href={`https://www.livecoinwatch.com/price/${coin.code}`}
+                      <Link
+                        to={`https://www.livecoinwatch.com/price/${coin.name}-${coin.code}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-blue-400 hover:underline"
+                        className="bg-[#00F5FF] hover:bg-transparent border border-[#00F5FF] text-[#0D0D0D] duration-300 hover:text-[#00F5FF]  px-4 py-1 rounded-md font-semibold"
                       >
                         Trade
-                      </a>
+                      </Link>
                     </TableCell>
                   </TableRow>
                 ))}
@@ -219,7 +217,7 @@ export default function LiveMarket() {
                 <Pagination
                   initialPage={1}
                   total={totalPages}
-                  currentPage={currentPage}
+                  page={currentPage}
                   onChange={setCurrentPage}
                   color="danger"
                 />
