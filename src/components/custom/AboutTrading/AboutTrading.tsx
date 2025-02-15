@@ -1,8 +1,37 @@
 /* eslint-disable react/self-closing-comp */
 /* eslint-disable prettier/prettier */
 import { GoArrowRight } from "react-icons/go";
+import AboutTradingCard from "./AboutTradingCard";
 
 const AboutTrading = () => {
+
+  const cards = [
+    {
+      image: "../../../../public/Article_Image.png",
+      title: "Basic Trading For Beginners",
+      authorImage: "../../../../public/Ellipse 80.png",
+      authorName: "Dasteen",
+      date: "Jan 10, 2022",
+      readTime: "3 Min Read",
+    },
+    {
+      image: "../../../../public/Article_Image (1).png",
+      title: "Start Earning From Trading",
+      authorImage: "../../../../public/Ellipse 80.png",
+      authorName: "Dasteen",
+      date: "Jan 10, 2022",
+      readTime: "3 Min Read",
+    },
+    {
+      image: "../../../../public/Article_Image (2).png",
+      title: "How To Become A Pro Trader",
+      authorImage: "../../../../public/Ellipse 80.png",
+      authorName: "Dasteen",
+      date: "Jan 10, 2022",
+      readTime: "3 Min Read",
+    },
+  ];
+
   return (
     <div className="w-11/12 md:w-10/12 mx-auto py-5 md:py-20">
      <h1 className="text-center font-semibold text-base md:text-4xl pb-6 md:pb-10 text-[#C0C0C0]">
@@ -16,6 +45,11 @@ const AboutTrading = () => {
           <button className="flex justify-center items-center gap-3 text-[#FFFFFF] text-xs md:text-base font-normal py-2 md:py-3 px-4 md:px-10 bg-[#FD5163] rounded-xl">Watch Video <GoArrowRight  /></button>
         </div>
       </div>
+      <div className="grid  grid-cols-1 md:grid-cols-3 gap-6 ">
+      {cards.map((card, index) => (
+        <AboutTradingCard key={index} {...card} />
+      ))}
+    </div>
     </div>
   );
 };
