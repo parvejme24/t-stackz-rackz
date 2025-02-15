@@ -46,7 +46,7 @@ export default function FAQSection() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="space-y-4">
           {faqs.slice(0, 3).map((faq, index) => (
-            <Accordion key={index} className="bg-[#222629] py-3 pl-4 rounded-xl  border-[0.5px] border-[#00f5ff]">
+            <Accordion key={index} className="bg-[#222629] py-3 pl-4 rounded-xl  border-[0.5px] border-[#05abb1]">
               <AccordionItem title={faq.question}  >
                 <p className="text-gray-300 p-2">{faq.answer}</p>
               </AccordionItem>
@@ -55,7 +55,7 @@ export default function FAQSection() {
         </div>
         <div className="space-y-4">
           {faqs.slice(3).map((faq, index) => (
-            <Accordion key={index + 3} className="bg-[#222629] py-3 pl-4 rounded-xl  border-[0.5px] border-[#00f5ff]">
+            <Accordion key={index + 3} className="bg-[#222629] py-3 pl-4 rounded-xl  border-[0.5px] border-[#05abb1]">
               <AccordionItem title={faq.question} >
                 
                 <p className=" p-3">{faq.answer}</p>
