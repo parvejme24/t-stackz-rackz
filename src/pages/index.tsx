@@ -6,6 +6,7 @@ import MarketTred from "@/components/custom/MarketTred/MarketTred";
 import PrivacyPolicy from "@/components/custom/PrivacyPolicy/PrivacyPolicy";
 import SecurityAndPriority from "@/components/custom/SecurityAndPriority/SecurityAndPriority";
 import SuccessStories from "@/components/custom/SuccessStroies/SuccessStories";
+import TradeSmartLiveFast from "@/components/custom/TradeSmartLiveFast/TradeSmartLiveFast";
 import DefaultLayout from "@/layouts/default";
 
 export default function IndexPage() {
@@ -20,6 +21,7 @@ export default function IndexPage() {
         <FAQ />
         <SecurityAndPriority />
         <PrivacyPolicy />
+        <TradeSmartLiveFast />
       </div>
     </DefaultLayout>
   );
