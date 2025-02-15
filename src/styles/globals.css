@@ -18,3 +18,8 @@ h6 {
     -webkit-text-stroke-width: 3px;
     -webkit-text-stroke-color: #C0C0C0;
 }
+.ft1 {
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #09cad1;
+}
