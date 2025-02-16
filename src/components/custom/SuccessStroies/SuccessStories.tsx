@@ -1,6 +1,7 @@
 import SuccessStoriesCard from "./SuccessStoriesCard";
 
-// import USERPROFILE from "../../../../public/images/user_profile.png";
+import USERPROFILE from "../../../../public/images/user_profile.png";
+import B1 from "../../../../public/images/b1.png";
 
 interface SuccessStory {
   name: string;
@@ -12,13 +13,14 @@ interface SuccessStory {
 const SuccessStoriesList1: SuccessStory[] = [
   {
     name: "Alex Carter",
-    profilePic: "/public/images/user_profile.png",
-    image: "/public/images/b1.png",
+    profilePic: USERPROFILE,
+    image: B1,
     text: "T-Stackz Rackz gives me the speed and precision I need. Their real-time alerts helped me catch a breakout trade on Bitcoin at just the right moment, allowing me to make $12,000 in just two days. The best part? It’s all in one sleek platform that simplifies trading for both beginners and pros!",
   },
   {
     name: "Samantha Lee",
-    profilePic: "/public/images/user_profile.png",
+    profilePic: USERPROFILE,
+    image: B1,
     text: "I’ve never seen such accuracy in trading alerts before! T-Stackz Rackz provided me with real-time insights that helped me optimize my trading strategy. Within a week, my portfolio grew by 35%, and I finally feel confident making trades on my own. Highly recommended!",
   },
   {
