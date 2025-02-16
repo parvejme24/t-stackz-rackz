@@ -1,27 +1,35 @@
 import { GoArrowRight } from "react-icons/go";
 import AboutTradingCard from "./AboutTradingCard";
 
+import ABOUT_IMAGE from "/public/images/about.png";
+
+import B1 from "/public/images/b1.png";
+import B2 from "/public/images/b2.png";
+import B3 from "/public/images/b3.png";
+
+import USERPROFILE from "/public/images/user_profile.png";
+
 const cards = [
   {
-    image: "/public/images/b1.png",
+    image: B1,
     title: "Basic Trading For Beginners",
-    authorImage: '/public/images/user_profile.png',
+    authorImage: USERPROFILE,
     authorName: "Dasteen",
     date: "Jan 10, 2022",
     readTime: "3 Min Read",
   },
   {
-    image: "/public/images/b2.png",
+    image: B2,
     title: "Start Earning From Trading",
-   authorImage: '/public/images/user_profile.png',
+    authorImage: USERPROFILE,
     authorName: "Dasteen",
     date: "Jan 10, 2022",
     readTime: "3 Min Read",
   },
   {
-    image: "/public/images/b3.png",
+    image: B3,
     title: "How To Become A Pro Trader",
-    authorImage: '/public/images/user_profile.png',
+    authorImage: USERPROFILE,
     authorName: "Dasteen",
     date: "Jan 10, 2022",
     readTime: "3 Min Read",
@@ -36,7 +44,7 @@ export default function AboutTrading() {
           Learn About Trading
         </h1>
         <div className="pb-6 md:pb-10 grid grid-cols-1 md:grid-cols-2 gap-5">
-          <img className="w-full" src="/public/images/about.png" alt="" />
+          <img className="w-full" src={ABOUT_IMAGE} alt="" />
           <div className="flex-1">
             <h1 className="font-medium text-xl lg:text-3xl text-[#00F5FF] pb-3 lg:pb-6">
               Master the Markets: Trade Smarter with T-Stackz Rackz

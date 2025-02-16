@@ -3,22 +3,22 @@ import { Accordion, AccordionItem } from "@heroui/accordion";
 const faqs = [
   {
     question: (
-      <h1 className="font-medium text-sm md:text-xl text-[#00f5ff] ">
+      <h1 className="font-medium text-sm md:text-xl text-[#00f5ff]">
         What is T-Stackz Rackz?
       </h1>
     ),
     answer: (
-      <p className=" text-xs md:text-base font-medium text-[#C0C0C0]">
+      <p className="text-xs md:text-base font-medium text-[#C0C0C0]">
         T-Stackz Rackz is a high-performance trading platform designed for
         stocks, options, and crypto (BTC/ETH), offering real-time alerts,
         AI-driven insights, and advanced trading tools to help traders maximize
-        profits.,
+        profits.
       </p>
     ),
   },
   {
     question: (
-      <h1 className="font-medium text-sm md:text-xl text-[#00f5ff] ">
+      <h1 className="font-medium text-sm md:text-xl text-[#00f5ff]">
         Is T-Stackz Rackz suitable for beginners?
       </h1>
     ),
@@ -31,7 +31,7 @@ const faqs = [
   },
   {
     question: (
-      <h1 className="font-medium text-sm md:text-xl text-[#00f5ff] ">
+      <h1 className="font-medium text-sm md:text-xl text-[#00f5ff]">
         Is it safe to use?
       </h1>
     ),
@@ -44,7 +44,7 @@ const faqs = [
   },
   {
     question: (
-      <h1 className="font-medium text-sm md:text-xl text-[#00f5ff] ">
+      <h1 className="font-medium text-sm md:text-xl text-[#00f5ff]">
         How can I learn Trading?
       </h1>
     ),
@@ -57,7 +57,7 @@ const faqs = [
   },
   {
     question: (
-      <h1 className="font-medium text-sm md:text-xl text-[#00f5ff] ">
+      <h1 className="font-medium text-sm md:text-xl text-[#00f5ff]">
         How do I sign up?
       </h1>
     ),
@@ -71,15 +71,14 @@ const faqs = [
   },
   {
     question: (
-      <h1 className="font-medium text-sm md:text-xl text-[#00f5ff] ">
-        How do I sign up?
+      <h1 className="font-medium text-sm md:text-xl text-[#00f5ff]">
+        What payment methods are supported?
       </h1>
     ),
     answer: (
       <p className="text-xs md:text-base font-medium text-[#C0C0C0]">
-        Click the 'Join Now' button and complete the registration process.
-        You'll get access to trading tools, real-time alerts, and market
-        insights right away.
+        We support credit/debit cards, PayPal, and crypto payments for
+        subscriptions and trading services.
       </p>
     ),
   },
@@ -97,7 +96,7 @@ export default function FAQSection() {
             {faqs.slice(0, 3).map((faq, index) => (
               <Accordion
                 key={index}
-                className="bg-[#222629] py-3 pl-4 rounded-xl  border-[0.5px] border-[#05abb1]"
+                className="bg-[#222629] py-3 pl-4 rounded-xl border-[0.5px] border-[#05abb1]"
               >
                 <AccordionItem title={faq.question}>
                   <p className="text-gray-300 p-2">{faq.answer}</p>
@@ -109,10 +108,10 @@ export default function FAQSection() {
             {faqs.slice(3).map((faq, index) => (
               <Accordion
                 key={index + 3}
-                className="bg-[#222629] py-3 pl-4 rounded-xl  border-[0.5px] border-[#05abb1]"
+                className="bg-[#222629] py-3 pl-4 rounded-xl border-[0.5px] border-[#05abb1]"
               >
                 <AccordionItem title={faq.question}>
-                  <p className=" p-3">{faq.answer}</p>
+                  <p className="p-3">{faq.answer}</p>
                 </AccordionItem>
               </Accordion>
             ))}
