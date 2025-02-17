@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa6";
+import { FaYoutube } from "react-icons/fa";
 
 export default function footer() {
   return (
@@ -21,7 +22,8 @@ export default function footer() {
               <li>
                 <Link
                   className="bg-[#00F5FF] hover:bg-transparent border border-[#00F5FF] p-3 text-xl rounded-full text-[#222629] hover:text-[#00F5FF] inline-block duration-300"
-                  to="/"
+                  to="https://x.com/realtjohnson74?s=21&t=VQyMO5X9OZWYxqJg716w9w"
+                  target="_blank"
                 >
                   <FaTwitter />
                 </Link>
@@ -29,7 +31,8 @@ export default function footer() {
               <li>
                 <Link
                   className="bg-[#00F5FF] hover:bg-transparent border border-[#00F5FF] p-3 text-xl rounded-full text-[#222629] hover:text-[#00F5FF] inline-block duration-300"
-                  to="/"
+                 to="https://www.facebook.com/share/18BjyizUNa/?mibextid=wwXIfr"
+                  target="_blank"
                 >
                   <FaFacebook />
                 </Link>
@@ -37,9 +40,19 @@ export default function footer() {
               <li>
                 <Link
                   className="bg-[#00F5FF] hover:bg-transparent border border-[#00F5FF] p-3 text-xl rounded-full text-[#222629] hover:text-[#00F5FF] inline-block duration-300"
-                  to="/"
+                  to="https://www.instagram.com/tstackz.rackz?igsh=eGM3aHA3cXk3d3Fx&utm_source=qr"
+                  target="_blank"
                 >
                   <FaInstagram />
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="bg-[#00F5FF] hover:bg-transparent border border-[#00F5FF] p-3 text-xl rounded-full text-[#222629] hover:text-[#00F5FF] inline-block duration-300"
+                  to="https://youtube.com/@t-stackz?si=9YLlmzT998nsCzLb"
+                  target="_blank"
+                >
+                  <FaYoutube />
                 </Link>
               </li>
             </ul>
