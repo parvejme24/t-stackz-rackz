@@ -24,6 +24,6 @@ h6 {
   -webkit-text-stroke-color: #09cad1;
 }
 
-body {
+* {
   scroll-behavior: smooth;
 }
