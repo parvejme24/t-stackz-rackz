@@ -8,7 +8,7 @@ export default function PrivacyPolicy() {
   }, []);
 
   return (
-    <div className="bg-[#222629] border-y border-[#222629]">
+    <div id="privacy" className="bg-[#222629] border-y border-[#222629]">
       <div className="container mx-auto max-w-7xl px-6 flex-grow pt-16 pb-16">
         {/* Privacy Policy Title */}
         <h1
