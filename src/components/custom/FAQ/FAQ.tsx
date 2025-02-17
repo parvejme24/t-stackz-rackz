@@ -1,5 +1,7 @@
 import { Accordion, AccordionItem } from "@heroui/accordion";
-
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 const faqs = [
   {
     question: (
@@ -85,13 +87,20 @@ const faqs = [
 ];
 
 export default function FAQSection() {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   return (
     <div
       id="faq"
       className="bg-[#131313] border-y border-[#222629] md:bg-gradient-to-br from-[#0D1515] to-[#0C1B1B]"
     >
       <div className="container mx-auto max-w-7xl px-6 py-5 md:py-20">
-        <h1 className="text-center font-semibold text-base md:text-4xl pb-6 md:pb-10 text-[#C0C0C0]">
+        <h1
+          className="text-center font-semibold text-base md:text-4xl pb-6 md:pb-10 text-[#C0C0C0]"
+          data-aos="fade-up"
+        >
           Frequently Asked Questions
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -100,6 +109,7 @@ export default function FAQSection() {
               <Accordion
                 key={index}
                 className="bg-[#222629] py-3 pl-4 rounded-xl border-[0.5px] border-[#05abb1]"
+                data-aos="fade-up"
               >
                 <AccordionItem title={faq.question}>
                   <p className="text-gray-300 p-2">{faq.answer}</p>
@@ -112,6 +122,7 @@ export default function FAQSection() {
               <Accordion
                 key={index + 3}
                 className="bg-[#222629] py-3 pl-4 rounded-xl border-[0.5px] border-[#05abb1]"
+                data-aos="fade-up"
               >
                 <AccordionItem title={faq.question}>
                   <p className="p-3">{faq.answer}</p>

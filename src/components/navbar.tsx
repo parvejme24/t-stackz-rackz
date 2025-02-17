@@ -174,7 +174,10 @@ const Navbar: React.FC = () => {
     <nav className="bg-[#151A18] text-[#C0C0C0] fixed w-full top-0 shadow-md z-50">
       <div className="container mx-auto max-w-7xl flex justify-between items-center px-6 py-4">
         {/* Logo */}
-        <RouterLink to="/" className="flex items-center gap-2 text-lg font-bold">
+        <RouterLink
+          to="/"
+          className="flex items-center gap-2 text-lg font-bold"
+        >
           <img src="/images/logo.png" alt="Logo" className="h-8" />
           T-Stackz Rackz
         </RouterLink>
@@ -207,14 +210,20 @@ const Navbar: React.FC = () => {
         </div>
 
         {/* Mobile Menu Toggle */}
-        <button className="lg:hidden text-2xl focus:outline-none" onClick={toggleMenu}>
+        <button
+          className="lg:hidden text-2xl focus:outline-none"
+          onClick={toggleMenu}
+        >
           {isOpen ? <FaTimes /> : <FaBars />}
         </button>
       </div>
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div ref={menuRef} className="lg:hidden px-6 bg-[#151A18] py-4 space-y-4 border-t border-gray-700">
+        <div
+          ref={menuRef}
+          className="lg:hidden px-6 bg-[#151A18] py-4 space-y-4 border-t border-gray-700"
+        >
           <ul>
             {navItems.map((item) => (
               <li key={item.to}>
@@ -232,7 +241,7 @@ const Navbar: React.FC = () => {
             ))}
           </ul>
           <RouterLink
-            to="/join"
+            to="#"
             className="inline-block px-4 py-2 text-sm font-normal text-white bg-gradient-to-r from-[#B12533] to-[#CA4250] rounded-md"
             onClick={toggleMenu}
           >
