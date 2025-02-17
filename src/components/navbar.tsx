@@ -26,7 +26,7 @@ export const Navbar = () => {
         <Link
           className={clsx(
             linkStyles({ color: "foreground" }),
-            "data-[active=true]:text-primary data-[active=true]:font-medium text-md font-semibold text-[#C0C0C0]"
+            "data-[active=true]:text-primary data-[active=true]:font-medium text-md font-semibold text-[#C0C0C0]",
           )}
           color="foreground"
           href={item.href}
@@ -58,9 +58,9 @@ export const Navbar = () => {
 
   return (
     <HeroUINavbar
+      className="bg-[#151A18] top-0"
       maxWidth="xl"
       position="sticky"
-      className="bg-[#151A18] top-0"
       style={
         theme === "dark"
           ? {
@@ -81,7 +81,7 @@ export const Navbar = () => {
             href="/"
           >
             {/* <Logo /> */}
-            <img src="/images/logo.png" alt="" />
+            <img alt="" src="/images/logo.png" />
             <h4 className="font-bold text-[#C0C0C0] ml-2">T-Stackz Rackz</h4>
           </Link>
         </NavbarBrand>

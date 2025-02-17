@@ -7,7 +7,7 @@ export default function WhyChoose() {
         <div
           className="w-full h-[500px] sm:h-[700px] md:h-[900px] lg:h-[1000px] bg-cover sm:bg-contain bg-no-repeat bg-center"
           style={{ backgroundImage: `url(${bgImage})` }}
-        ></div>
+        />
       </div>
     </div>
   );
