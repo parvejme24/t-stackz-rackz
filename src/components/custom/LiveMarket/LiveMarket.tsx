@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
 import { Pagination } from "@heroui/pagination";
 import { IoSearchOutline } from "react-icons/io5";
-import CoinTable from "@/components/Skeleton/CoinTable";
 import { Link } from "react-router-dom";
+import AOS from "aos";
+
+import CoinTable from "@/components/Skeleton/CoinTable";
+import "aos/dist/aos.css";
 
 const API_KEY = import.meta.env.VITE_LIVECOINWATCH_API_KEY;
 const API_URL = "https://api.livecoinwatch.com/coins/list";
@@ -31,6 +34,8 @@ export default function LiveMarket() {
   const itemsPerPage = 10;
 
   useEffect(() => {
+    AOS.init({ duration: 1000, once: false });
+
     const fetchMarketData = async () => {
       try {
         const response = await fetch(API_URL, {
@@ -59,8 +64,8 @@ export default function LiveMarket() {
           ...new Set(
             data.flatMap(
               (coin) =>
-                coin.categories?.map((cat) => cat.replace(/[_-]/g, " ")) || []
-            )
+                coin.categories?.map((cat) => cat.replace(/[_-]/g, " ")) || [],
+            ),
           ),
         ];
 
@@ -80,25 +85,32 @@ export default function LiveMarket() {
     (coin) =>
       (selectedCategory === "All" ||
         coin.categories?.some(
-          (cat) => cat.replace(/[_-]/g, " ") === selectedCategory
+          (cat) => cat.replace(/[_-]/g, " ") === selectedCategory,
         )) &&
       (coin.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        coin.code.toLowerCase().includes(searchQuery.toLowerCase()))
+        coin.code.toLowerCase().includes(searchQuery.toLowerCase())),
   );
 
   const totalPages = Math.ceil(filteredCoins.length / itemsPerPage);
   const displayedCoins = filteredCoins.slice(
     (currentPage - 1) * itemsPerPage,
-    currentPage * itemsPerPage
+    currentPage * itemsPerPage,
   );
 
   return (
-    <div id="liveMarket" className="bg-[#131313] py-20 text-white">
+    <div className="bg-[#131313] py-20 text-white" id="liveMarket">
       <div className="container mx-auto max-w-7xl px-6">
-        <h3 className="text-[#C0C0C0] font-bold text-2xl text-center">
+        <h3
+          className="text-[#C0C0C0] font-bold text-2xl text-center"
+          data-aos="fade-up"
+        >
           Live Market
         </h3>
-        <p className="text-[#C0C0C0] font-semibold text-xl mb-6 text-center md:text-left">
+        <p
+          className="text-[#C0C0C0] font-semibold text-xl mb-6 text-center md:text-left"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
           Cryptocurrency Prices
         </p>
 
@@ -122,7 +134,7 @@ export default function LiveMarket() {
                     {category}
                   </button>
                 </li>
-              )
+              ),
             )}
             {!showAllCategories && categories.length > 5 && (
               <li>
@@ -139,9 +151,9 @@ export default function LiveMarket() {
           <div className="flex mx-auto md:mx-0 items-center border border-[#00F5FF] rounded-lg pl-2 py-1">
             <IoSearchOutline className="text-2xl text-[#00F5FF]" />
             <input
-              type="text"
-              placeholder="Search coin..."
               className="bg-[#1E1E1E] text-white px-3 py-1 rounded-lg focus:outline-none"
+              placeholder="Search coin..."
+              type="text"
               value={searchQuery}
               onChange={(e) => {
                 setSearchQuery(e.target.value);
@@ -172,15 +184,20 @@ export default function LiveMarket() {
                 </thead>
                 <tbody>
                   {displayedCoins.map((coin, index) => (
-                    <tr key={coin.code} className="border-b border-gray-700">
+                    <tr
+                      key={coin.code}
+                      className="border-b border-gray-700"
+                      data-aos="zoom-in-up"
+                      data-aos-once="true"
+                    >
                       <td className="p-2 md:p-3">
                         {(currentPage - 1) * itemsPerPage + index + 1}
                       </td>
                       <td className="p-2 md:p-3 flex items-center gap-2">
                         <img
-                          src={coin.png64 || ""}
                           alt={coin.name}
                           className="w-6 h-6"
+                          src={coin.png64 || ""}
                         />
                         {coin.name} ({coin.code})
                       </td>
@@ -197,10 +214,10 @@ export default function LiveMarket() {
                       </td>
                       <td className="p-2 md:p-3 hidden md:table-cell">
                         <Link
-                          to={`https://www.livecoinwatch.com/price/${coin.name}-${coin.code}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
                           className="bg-[#00F5FF] hover:bg-transparent border border-[#00F5FF] text-[#0D0D0D] duration-300 hover:text-[#00F5FF] px-3 py-1 rounded-md font-semibold"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                          to={`https://www.livecoinwatch.com/price/${coin.name}-${coin.code}`}
                         >
                           Trade
                         </Link>
@@ -215,18 +232,20 @@ export default function LiveMarket() {
             {filteredCoins.length > itemsPerPage && (
               <div className="flex justify-center mt-6">
                 <Pagination
-                  initialPage={1}
-                  total={totalPages}
-                  page={currentPage}
-                  onChange={setCurrentPage}
                   color="danger"
+                  initialPage={1}
+                  page={currentPage}
+                  total={totalPages}
+                  onChange={setCurrentPage}
                 />
               </div>
             )}
           </div>
         )}
 
-        <p className="text-center text-white">{displayedCoins.length < 0 ? "No coins found" : ""}</p>
+        <p className="text-center text-white">
+          {displayedCoins.length < 0 ? "No coins found" : ""}
+        </p>
       </div>
     </div>
   );

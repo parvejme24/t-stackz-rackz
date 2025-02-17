@@ -16,22 +16,22 @@ export default function CoinTable() {
           {[...Array(10)].map((_, index) => (
             <tr key={index} className="bg-[#0D0D0D] border border-gray-700">
               <td className="p-3 border border-gray-700">
-                <div className="w-20 h-5 bg-gray-700 animate-pulse"></div>
+                <div className="w-20 h-5 bg-gray-700 animate-pulse" />
               </td>
               <td className="p-3 border border-gray-700">
-                <div className="w-16 h-5 bg-gray-700 animate-pulse"></div>
+                <div className="w-16 h-5 bg-gray-700 animate-pulse" />
               </td>
               <td className="p-3 border border-gray-700">
-                <div className="w-20 h-5 bg-gray-700 animate-pulse"></div>
+                <div className="w-20 h-5 bg-gray-700 animate-pulse" />
               </td>
               <td className="p-3 border border-gray-700">
-                <div className="w-20 h-5 bg-gray-700 animate-pulse"></div>
+                <div className="w-20 h-5 bg-gray-700 animate-pulse" />
               </td>
               <td className="p-3 border border-gray-700">
-                <div className="w-20 h-5 bg-gray-700 animate-pulse"></div>
+                <div className="w-20 h-5 bg-gray-700 animate-pulse" />
               </td>
               <td className="p-3 border border-gray-700">
-                <div className="w-20 h-5 bg-gray-700 animate-pulse"></div>
+                <div className="w-20 h-5 bg-gray-700 animate-pulse" />
               </td>
             </tr>
           ))}
