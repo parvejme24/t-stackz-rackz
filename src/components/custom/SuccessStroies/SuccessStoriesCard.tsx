@@ -16,9 +16,9 @@ export default function SuccessStoriesCard({
       {/* Profile Section */}
       <div className="flex items-center gap-3">
         <img
-          src={profilePic}
           alt={name}
           className="w-8 md:w-12 h-8 md:h-12 rounded-full object-cover"
+          src={profilePic}
         />
         <h3 className="text-sm md:text-lg font-semibold text-cyan-400">
           {name}
@@ -29,9 +29,9 @@ export default function SuccessStoriesCard({
       {image && (
         <div className="mt-3">
           <img
-            src={image}
             alt="testimonial"
             className="w-full h-20 md:h-40 object-cover rounded-xl"
+            src={image}
           />
         </div>
       )}

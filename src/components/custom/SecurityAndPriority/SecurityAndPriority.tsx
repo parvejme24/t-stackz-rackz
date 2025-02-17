@@ -53,9 +53,9 @@ const SecurityAndPriority = () => {
           {securityData.map((item) => (
             <SecurityAndPriorityCard
               key={item.id}
-              title={item.title}
               description={item.description}
               icon={item.icon}
+              title={item.title}
             />
           ))}
         </div>

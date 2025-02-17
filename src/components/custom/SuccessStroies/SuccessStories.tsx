@@ -1,9 +1,10 @@
-import SuccessStoriesCard from "./SuccessStoriesCard";
+import { useEffect } from "react";
+import AOS from "aos";
 
 import USERPROFILE from "../../../../public/images/user_profile.png";
 import B1 from "../../../../public/images/b1.png";
-import { useEffect } from "react";
-import AOS from "aos";
+
+import SuccessStoriesCard from "./SuccessStoriesCard";
 import "aos/dist/aos.css";
 
 interface SuccessStory {
@@ -89,31 +90,31 @@ export default function SuccessStories() {
       <div className="bg-[#0D0D0D]">
         <div className="container mx-auto max-w-7xl px-6 py-5 md:py-20">
           <div data-aos="fade-up">
-          <h1  className="text-center font-semibold text-base md:text-4xl pb-6 md:pb-10 text-[#C0C0C0]">
-            Our Success Stories
-          </h1>
+            <h1 className="text-center font-semibold text-base md:text-4xl pb-6 md:pb-10 text-[#C0C0C0]">
+              Our Success Stories
+            </h1>
           </div>
           <div className="flex justify-between items-center gap-3 ">
             <div className="space-y-3">
               {SuccessStoriesList1.map((item, index) => (
-                <div data-aos="fade-up" key={index}>
-                <SuccessStoriesCard {...item} />
-              </div>
+                <div key={index} data-aos="fade-up">
+                  <SuccessStoriesCard {...item} />
+                </div>
               ))}
             </div>
 
             <div className="space-y-3">
               {SuccessStoriesList2.map((item, index) => (
-                <div data-aos="fade-up" key={index}>
-                <SuccessStoriesCard {...item} />
-              </div>
+                <div key={index} data-aos="fade-up">
+                  <SuccessStoriesCard {...item} />
+                </div>
               ))}
             </div>
             <div className="space-y-3 hidden md:block">
               {SuccessStoriesList3.map((item, index) => (
-                <div data-aos="fade-up" key={index}>
-                <SuccessStoriesCard {...item} />
-              </div>
+                <div key={index} data-aos="fade-up">
+                  <SuccessStoriesCard {...item} />
+                </div>
               ))}
             </div>
           </div>

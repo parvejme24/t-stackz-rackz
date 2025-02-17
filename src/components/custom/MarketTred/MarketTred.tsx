@@ -44,6 +44,7 @@ export default function MarketTred() {
         if (!response.ok) throw new Error("Failed to fetch data");
 
         const data: Coin[] = await response.json();
+
         setCoins(data);
       } catch (error) {
         console.error("Error fetching market data:", error);
@@ -53,7 +54,6 @@ export default function MarketTred() {
     };
 
     fetchMarketData();
-    
   }, []);
 
   return (
@@ -77,15 +77,15 @@ export default function MarketTred() {
                 key={code}
                 className="bg-[#1E2124] border border-[#009fa777] p-6 rounded-xl space-y-5"
                 data-aos="fade-up"
-                data-aos-delay={index * 200} 
+                data-aos-delay={index * 200}
               >
                 <div className="flex justify-between items-center gap-3">
                   <div className="flex items-center gap-3">
                     {png64 && (
                       <img
-                        src={png64}
                         alt={name}
                         className="w-10 h-10 rounded-full"
+                        src={png64}
                       />
                     )}
                     <p className="font-bold text-xl text-[#C0C0C0]">{code}</p>
@@ -95,14 +95,14 @@ export default function MarketTred() {
                   </div>
 
                   <Link
-                    to={`https://www.livecoinwatch.com/price/${name}-${code}`}
                     target="_blank"
+                    to={`https://www.livecoinwatch.com/price/${name}-${code}`}
                   >
                     <MdArrowOutward className="text-[#00F5FF] text-4xl rounded-full p-2 bg-[#25282B]" />
                   </Link>
                 </div>
 
-                <div className="border-2 border-[#25282B]"></div>
+                <div className="border-2 border-[#25282B]" />
 
                 <div className="grid grid-cols-2 gap-10">
                   <div>
