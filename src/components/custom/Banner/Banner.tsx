@@ -7,8 +7,8 @@ import { GoArrowRight } from "react-icons/go";
 export default function Banner() {
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Animation duration in milliseconds
-      once: true, // Only animate once
+      duration: 1000, 
+      once: true, 
     });
   }, []);
 
@@ -37,7 +37,7 @@ export default function Banner() {
       
       
 
-      <button data-aos="zoom-in" data-aos-delay="400" 
+      <button data-aos="fade-up" data-aos-delay="400" 
       className="bg-gradient-to-r from-[#FA4E60] to-[#DA293B] text-white font-semibold py-3 px-6 flex items-center gap-2 rounded-lg mt-6 hover:scale-105 transition duration-300 self-start md:self-center">
         Start Trading <GoArrowRight />
       </button>
