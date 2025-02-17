@@ -3,6 +3,9 @@ import { Pagination } from "@heroui/pagination";
 import { IoSearchOutline } from "react-icons/io5";
 import CoinTable from "@/components/Skeleton/CoinTable";
 import { Link } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 
 const API_KEY = import.meta.env.VITE_LIVECOINWATCH_API_KEY;
 const API_URL = "https://api.livecoinwatch.com/coins/list";
@@ -31,6 +34,8 @@ export default function LiveMarket() {
   const itemsPerPage = 10;
 
   useEffect(() => {
+       AOS.init({ duration: 1000, once: false });
+
     const fetchMarketData = async () => {
       try {
         const response = await fetch(API_URL, {
@@ -95,10 +100,10 @@ export default function LiveMarket() {
   return (
     <div id="liveMarket" className="bg-[#131313] py-20 text-white">
       <div className="container mx-auto max-w-7xl px-6">
-        <h3 className="text-[#C0C0C0] font-bold text-2xl text-center">
+        <h3 data-aos="fade-up" className="text-[#C0C0C0] font-bold text-2xl text-center">
           Live Market
         </h3>
-        <p className="text-[#C0C0C0] font-semibold text-xl mb-6 text-center md:text-left">
+        <p data-aos="fade-up" data-aos-delay="200" className="text-[#C0C0C0] font-semibold text-xl mb-6 text-center md:text-left">
           Cryptocurrency Prices
         </p>
 
@@ -172,7 +177,8 @@ export default function LiveMarket() {
                 </thead>
                 <tbody>
                   {displayedCoins.map((coin, index) => (
-                    <tr key={coin.code} className="border-b border-gray-700">
+                    <tr key={coin.code} className="border-b border-gray-700"
+                     data-aos="zoom-in-up"  data-aos-once="true">
                       <td className="p-2 md:p-3">
                         {(currentPage - 1) * itemsPerPage + index + 1}
                       </td>

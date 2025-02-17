@@ -76,7 +76,7 @@ export default function MarketTred() {
               <div
                 key={code}
                 className="bg-[#1E2124] border border-[#009fa777] p-6 rounded-xl space-y-5"
-                data-aos="zoom-in-up"
+                data-aos="fade-up"
                 data-aos-delay={index * 200} 
               >
                 <div className="flex justify-between items-center gap-3">
