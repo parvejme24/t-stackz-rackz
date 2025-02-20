@@ -93,8 +93,8 @@ export default function FAQSection() {
 
   return (
     <div
-      id="faq"
       className="bg-[#131313] border-y border-[#222629] md:bg-gradient-to-br from-[#0D1515] to-[#0C1B1B]"
+      id="faq"
     >
       <div className="container mx-auto max-w-7xl px-6 py-5 md:py-20">
         <h1

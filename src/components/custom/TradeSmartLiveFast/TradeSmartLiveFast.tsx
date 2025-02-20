@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import AOS from "aos";
+
 import "aos/dist/aos.css"; // Import AOS CSS
 import CarImage from "../../../../public/images/car.png";
 
@@ -13,29 +14,29 @@ export default function TradeSmartLiveFast() {
       <div className="bg-[#0B393B] pt-10 pb-10 md:pb-16 relative overflow-hidden">
         {/* Title with Animation */}
         <h1
-          data-aos="fade-up"
           className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl text-[#00F5FF] font-extrabold text-center"
+          data-aos="fade-up"
         >
           Trade Smart Live Fast.
         </h1>
         <h1
+          className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl text-[#00F5FF] font-extrabold text-center"
           data-aos="fade-up"
           data-aos-delay="200"
-          className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl text-[#00F5FF] font-extrabold text-center"
         >
           <span className="ft1">Trade Smart Live Fast.</span>
         </h1>
         <h1
+          className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl text-[#00F5FF] font-extrabold text-center"
           data-aos="fade-up"
           data-aos-delay="400"
-          className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl text-[#00F5FF] font-extrabold text-center"
         >
           <span className="ft1">Trade Smart Live Fast.</span>
         </h1>
         <h1
+          className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl text-[#00F5FF] font-extrabold text-center"
           data-aos="fade-up"
           data-aos-delay="600"
-          className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl text-[#00F5FF] font-extrabold text-center"
         >
           <span className="ft1">Trade Smart Live Fast.</span>
         </h1>

@@ -22,8 +22,8 @@ export default function footer() {
               <li>
                 <Link
                   className="bg-[#00F5FF] hover:bg-transparent border border-[#00F5FF] p-3 text-xl rounded-full text-[#222629] hover:text-[#00F5FF] inline-block duration-300"
-                  to="https://x.com/realtjohnson74?s=21&t=VQyMO5X9OZWYxqJg716w9w"
                   target="_blank"
+                  to="https://x.com/realtjohnson74?s=21&t=VQyMO5X9OZWYxqJg716w9w"
                 >
                   <FaTwitter />
                 </Link>
@@ -31,8 +31,8 @@ export default function footer() {
               <li>
                 <Link
                   className="bg-[#00F5FF] hover:bg-transparent border border-[#00F5FF] p-3 text-xl rounded-full text-[#222629] hover:text-[#00F5FF] inline-block duration-300"
-                 to="https://www.facebook.com/share/18BjyizUNa/?mibextid=wwXIfr"
                   target="_blank"
+                  to="https://www.facebook.com/share/18BjyizUNa/?mibextid=wwXIfr"
                 >
                   <FaFacebook />
                 </Link>
@@ -40,8 +40,8 @@ export default function footer() {
               <li>
                 <Link
                   className="bg-[#00F5FF] hover:bg-transparent border border-[#00F5FF] p-3 text-xl rounded-full text-[#222629] hover:text-[#00F5FF] inline-block duration-300"
-                  to="https://www.instagram.com/tstackz.rackz?igsh=eGM3aHA3cXk3d3Fx&utm_source=qr"
                   target="_blank"
+                  to="https://www.instagram.com/tstackz.rackz?igsh=eGM3aHA3cXk3d3Fx&utm_source=qr"
                 >
                   <FaInstagram />
                 </Link>
@@ -49,8 +49,8 @@ export default function footer() {
               <li>
                 <Link
                   className="bg-[#00F5FF] hover:bg-transparent border border-[#00F5FF] p-3 text-xl rounded-full text-[#222629] hover:text-[#00F5FF] inline-block duration-300"
-                  to="https://youtube.com/@t-stackz?si=9YLlmzT998nsCzLb"
                   target="_blank"
+                  to="https://youtube.com/@t-stackz?si=9YLlmzT998nsCzLb"
                 >
                   <FaYoutube />
                 </Link>

@@ -175,10 +175,10 @@ const Navbar: React.FC = () => {
       <div className="container mx-auto max-w-7xl flex justify-between items-center px-6 py-4">
         {/* Logo */}
         <RouterLink
-          to="/"
           className="flex items-center gap-2 text-lg font-bold"
+          to="/"
         >
-          <img src="/images/logo.png" alt="Logo" className="h-8" />
+          <img alt="Logo" className="h-8" src="/images/logo.png" />
           T-Stackz Rackz
         </RouterLink>
 
@@ -187,11 +187,11 @@ const Navbar: React.FC = () => {
           {navItems.map((item) => (
             <li key={item.to}>
               <ScrollLink
-                to={item.to}
-                smooth={true}
+                className="cursor-pointer hover:text-primary"
                 duration={500}
                 offset={-80}
-                className="cursor-pointer hover:text-primary"
+                smooth={true}
+                to={item.to}
               >
                 {item.label}
               </ScrollLink>
@@ -202,10 +202,10 @@ const Navbar: React.FC = () => {
         {/* Right Side Controls */}
         <div className="hidden lg:flex items-center space-x-4">
           <a
-            href="https://whop.com/t-stackzrackz/"
-            target="_blank"
-            rel="noopener noreferrer"
             className="px-4 py-2 text-sm font-normal text-white bg-gradient-to-r from-[#B12533] to-[#CA4250] rounded-md"
+            href="https://whop.com/t-stackzrackz/"
+            rel="noopener noreferrer"
+            target="_blank"
           >
             Join Now
           </a>
@@ -230,11 +230,11 @@ const Navbar: React.FC = () => {
             {navItems.map((item) => (
               <li key={item.to}>
                 <ScrollLink
-                  to={item.to}
-                  smooth={true}
+                  className="cursor-pointer hover:text-primary"
                   duration={500}
                   offset={-80}
-                  className="cursor-pointer hover:text-primary"
+                  smooth={true}
+                  to={item.to}
                   onClick={toggleMenu}
                 >
                   {item.label}
@@ -243,9 +243,9 @@ const Navbar: React.FC = () => {
             ))}
           </ul>
           <RouterLink
-            to="https://whop.com/t-stackzrackz/"
-            target="_blank"
             className="inline-block px-4 py-2 text-sm font-normal text-white bg-gradient-to-r from-[#B12533] to-[#CA4250] rounded-md"
+            target="_blank"
+            to="https://whop.com/t-stackzrackz/"
             onClick={toggleMenu}
           >
             Join Now

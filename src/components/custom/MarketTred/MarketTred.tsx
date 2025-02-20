@@ -117,7 +117,8 @@ export default function MarketTred() {
                   </div>
                   <div>
                     <p className="text-[#C0C0C0]">
-                      Market Cap: <span className="text-xs">${cap.toLocaleString()}</span>
+                      Market Cap:{" "}
+                      <span className="text-xs">${cap.toLocaleString()}</span>
                     </p>
                   </div>
                 </div>

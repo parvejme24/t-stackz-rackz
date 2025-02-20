@@ -72,11 +72,11 @@ export default function AboutTrading() {
               data-aos="fade-up"
             >
               Unlock the secrets of successful trading with T-Stackz Rackz!
-              Whether you're new to stocks, options, or crypto, or an
-              experienced trader looking for an edge, our platform provides
-              AI-powered insights, real-time alerts, and expert strategies to
-              help you trade smarter and profit faster. Watch this video to see
-              how T-Stackz Rackz can transform your trading journey!
+              Whether your new to stocks, options, or crypto, or an experienced
+              trader looking for an edge, our platform provides AI-powered
+              insights, real-time alerts, and expert strategies to help you
+              trade smarter and profit faster. Watch this video to see how
+              T-Stackz Rackz can transform your trading journey!
             </p>
             <button
               className="flex justify-center items-center gap-3 text-[#FFFFFF] text-xs md:text-base font-normal py-2 md:py-3 px-4 md:px-10 bg-[#FD5163] rounded-xl"
