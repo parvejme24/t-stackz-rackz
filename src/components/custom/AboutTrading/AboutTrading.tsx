@@ -4,6 +4,7 @@ import ABOUT_IMAGE from "/public/images/about.png";
 import B1 from "/public/images/b1.png";
 import B2 from "/public/images/b2.png";
 import B3 from "/public/images/b3.png";
+import AuthorImg from "/public/images/logo.png";
 // import USERPROFILE from "/public/images/user_profile.png";
 
 import { useEffect } from "react";
@@ -16,27 +17,26 @@ const cards = [
   {
     image: B1,
     title: "Basic Trading For Beginners",
-    authorImage:
-      "https://t3.ftcdn.net/jpg/03/02/88/46/360_F_302884605_actpipOdPOQHDTnFtp4zg4RtlWzhOASp.jpg",
-    authorName: "Dasteen",
-    date: "Jan 10, 2022",
-    readTime: "3 Min Read",
+    authorImage: AuthorImg,
+    authorName: "T-Stackz-Rackz",
+    date: "Jan 10, 2025",
+    readTime: "10 Min Read",
   },
   {
     image: B2,
     title: "Start Earning From Trading",
-    authorImage: 'https://media.licdn.com/dms/image/v2/C4D03AQFyFdOi9_XEUA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1624117651933?e=2147483647&v=beta&t=Y_1t-mmPDwCWkf1aHtPGoY_-50n5k9CBog9ZKaQhSE4',
-    authorName: "Dasteen",
-    date: "Jan 10, 2022",
+    authorImage: AuthorImg,
+    authorName: "T-Stackz-Rackz",
+    date: "Jan 20, 2025",
     readTime: "3 Min Read",
   },
   {
     image: B3,
     title: "How To Become A Pro Trader",
-    authorImage: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVDW-A-Kab70oO1iKgfn_61bkLV1fIz4VLHg&s',
-    authorName: "Dasteen",
-    date: "Jan 10, 2022",
-    readTime: "3 Min Read",
+    authorImage: AuthorImg,
+    authorName: "T-Stackz-Rackz",
+    date: "february 19, 2025",
+    readTime: "6 Min Read",
   },
 ];
 
