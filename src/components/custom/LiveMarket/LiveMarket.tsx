@@ -64,8 +64,8 @@ export default function LiveMarket() {
           ...new Set(
             data.flatMap(
               (coin) =>
-                coin.categories?.map((cat) => cat.replace(/[_-]/g, " ")) || [],
-            ),
+                coin.categories?.map((cat) => cat.replace(/[_-]/g, " ")) || []
+            )
           ),
         ];
 
@@ -85,16 +85,16 @@ export default function LiveMarket() {
     (coin) =>
       (selectedCategory === "All" ||
         coin.categories?.some(
-          (cat) => cat.replace(/[_-]/g, " ") === selectedCategory,
+          (cat) => cat.replace(/[_-]/g, " ") === selectedCategory
         )) &&
       (coin.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        coin.code.toLowerCase().includes(searchQuery.toLowerCase())),
+        coin.code.toLowerCase().includes(searchQuery.toLowerCase()))
   );
 
   const totalPages = Math.ceil(filteredCoins.length / itemsPerPage);
   const displayedCoins = filteredCoins.slice(
     (currentPage - 1) * itemsPerPage,
-    currentPage * itemsPerPage,
+    currentPage * itemsPerPage
   );
 
   return (
@@ -134,7 +134,7 @@ export default function LiveMarket() {
                     {category}
                   </button>
                 </li>
-              ),
+              )
             )}
             {!showAllCategories && categories.length > 5 && (
               <li>
@@ -204,7 +204,9 @@ export default function LiveMarket() {
                       <td className="p-2 md:p-3">${coin.rate.toFixed(2)}</td>
                       <td
                         className={`p-2 md:p-3 font-semibold ${
-                          coin.delta.day > 0 ? "text-green-500" : "text-red-500"
+                          coin.delta.day * 100 - 100 > 0
+                            ? "text-green-500"
+                            : "text-red-500"
                         }`}
                       >
                         {(coin.delta.day * 100 - 100).toFixed(2)}%

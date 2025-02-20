@@ -241,7 +241,8 @@ const Navbar: React.FC = () => {
             ))}
           </ul>
           <RouterLink
-            to="#"
+            to="https://whop.com/t-stackzrackz/"
+            target="_blank"
             className="inline-block px-4 py-2 text-sm font-normal text-white bg-gradient-to-r from-[#B12533] to-[#CA4250] rounded-md"
             onClick={toggleMenu}
           >
