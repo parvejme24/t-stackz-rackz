@@ -29,7 +29,7 @@ export default function Banner() {
       </video>
 
       {/* Overlay Container with Opacity */}
-      <div className="bg-[#000] bg-opacity-60 py-10 px-6 space-y-8 w-full min-h-screen flex flex-col items-center justify-center">
+      <div className="bg-[#000] bg-opacity-60 py-10  px-6 space-y-8 w-full min-h-screen flex flex-col items-center justify-center">
         {/* Main Heading */}
         <h1
           className="text-4xl md:text-7xl lg:text-8xl text-white font-extrabold"
@@ -57,10 +57,10 @@ export default function Banner() {
 
         {/* Call-to-Action Button */}
         <a
-          href="#liveMarket"
           className="bg-gradient-to-r from-[#FA4E60] to-[#DA293B] text-white font-semibold py-3 px-6 flex items-center gap-2 rounded-lg mt-6 hover:scale-105 transition duration-300"
-          data-aos="fade-up"
-          data-aos-delay="400"
+          href="https://whop.com/t-stackzrackz"
+          rel="noopener noreferrer"
+          target="_blank"
         >
           Start Trading <GoArrowRight />
         </a>
