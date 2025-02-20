@@ -57,10 +57,10 @@ export default function Banner() {
 
         {/* Call-to-Action Button */}
         <a
-          href="#liveMarket"
+          href="https://whop.com/t-stackzrackz"
+          target="_blank"
+          rel="noopener noreferrer"
           className="bg-gradient-to-r from-[#FA4E60] to-[#DA293B] text-white font-semibold py-3 px-6 flex items-center gap-2 rounded-lg mt-6 hover:scale-105 transition duration-300"
-          data-aos="fade-up"
-          data-aos-delay="400"
         >
           Start Trading <GoArrowRight />
         </a>

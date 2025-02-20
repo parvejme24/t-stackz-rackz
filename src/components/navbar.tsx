@@ -201,12 +201,14 @@ const Navbar: React.FC = () => {
 
         {/* Right Side Controls */}
         <div className="hidden lg:flex items-center space-x-4">
-          <RouterLink
-            to="/join"
+          <a
+            href="https://whop.com/t-stackzrackz/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-4 py-2 text-sm font-normal text-white bg-gradient-to-r from-[#B12533] to-[#CA4250] rounded-md"
           >
             Join Now
-          </RouterLink>
+          </a>
         </div>
 
         {/* Mobile Menu Toggle */}
