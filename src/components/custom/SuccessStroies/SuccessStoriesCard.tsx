@@ -30,7 +30,7 @@ export default function SuccessStoriesCard({
         <div className="mt-3">
           <img
             alt="testimonial"
-            className="w-full h-20 md:h-40 object-cover rounded-xl"
+            className="w-full h-44 md:h-40 object-cover rounded-xl"
             src={image}
           />
         </div>
