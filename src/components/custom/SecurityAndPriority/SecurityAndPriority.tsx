@@ -47,15 +47,15 @@ const SecurityAndPriority = () => {
         {/* Security and priority Heading */}
         <div>
           <h1
-            data-aos="fade-up"
             className="text-center font-semibold text-base md:text-4xl text-[#C0C0C0] pb-4 md:pb-6"
+            data-aos="fade-up"
           >
             Your Security, Our Priority
           </h1>
           <p
+            className="text-xs md:text-base font-normal text-center pb-6 md:pb-10 text-[#B3B3B3]"
             data-aos="fade-up"
             data-aos-delay="200"
-            className="text-xs md:text-base font-normal text-center pb-6 md:pb-10 text-[#B3B3B3]"
           >
             We use cutting-edge technology to keep your funds and data safe.
             Trade with confidence knowing your assets are fully protected.
