@@ -14,8 +14,8 @@ const AboutTradingCard: React.FC<CardProps> = ({
   title,
   authorImage,
   authorName,
-  date,
-  readTime,
+  // date,
+  // readTime,
 }) => {
   return (
     <div className="">
