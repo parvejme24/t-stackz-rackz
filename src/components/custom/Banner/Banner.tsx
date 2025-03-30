@@ -24,6 +24,7 @@ export default function Banner() {
         muted
         className="absolute top-0 left-0 w-full h-full object-cover z-[-1]"
       >
+        <source src="/video/dragon1.webm" type="video/webm" />
         <source src="/video/dragon1.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
