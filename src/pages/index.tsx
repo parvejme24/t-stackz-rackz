@@ -8,11 +8,13 @@ import SecurityAndPriority from "@/components/custom/SecurityAndPriority/Securit
 import SuccessStories from "@/components/custom/SuccessStroies/SuccessStories";
 import TradeSmartLiveFast from "@/components/custom/TradeSmartLiveFast/TradeSmartLiveFast";
 import WhyChoose from "@/components/custom/WhyChoose/WhyChoose";
+import ToastPopup from "@/components/ToastPopup/ToastPopup";
 import DefaultLayout from "@/layouts/default";
 
 export default function IndexPage() {
   return (
     <DefaultLayout>
+      <ToastPopup />
       <div>
         <Banner />
         <MarketTred />
