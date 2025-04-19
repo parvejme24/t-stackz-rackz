@@ -50,7 +50,7 @@ export default function footer() {
                 <Link
                   className="bg-[#00F5FF] hover:bg-transparent border border-[#00F5FF] p-3 text-xl rounded-full text-[#222629] hover:text-[#00F5FF] inline-block duration-300"
                   target="_blank"
-                  to="https://youtube.com/@t-stackz?si=9YLlmzT998nsCzLb"
+                  to="https://www.youtube.com/@tstackzrackz"
                 >
                   <FaYoutube />
                 </Link>

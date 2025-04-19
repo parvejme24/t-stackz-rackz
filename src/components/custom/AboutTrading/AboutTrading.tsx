@@ -5,7 +5,6 @@ import B1 from "/public/images/b1.png";
 import B2 from "/public/images/b2.png";
 import B3 from "/public/images/b3.png";
 import AuthorImg from "/public/images/logo.png";
-// import USERPROFILE from "/public/images/user_profile.png";
 
 import { useEffect } from "react";
 import AOS from "aos";
@@ -35,7 +34,7 @@ const cards = [
     title: "How To Become A Pro Trader",
     authorImage: AuthorImg,
     authorName: "T-Stackz-Rackz",
-    date: "february 19, 2025",
+    date: "February 19, 2025",
     readTime: "6 Min Read",
   },
 ];
@@ -44,6 +43,13 @@ export default function AboutTrading() {
   useEffect(() => {
     AOS.init({ duration: 1000 }); // Initialize AOS with a duration of 1000ms
   }, []);
+
+  const handleWatchVideo = () => {
+    window.open(
+      "https://www.youtube.com/watch?si=q8xzLi1xk75X5BDC&v=ZhPHM1EVpDA&feature=youtu.be",
+      "_blank"
+    );
+  };
 
   return (
     <div className="bg-[#0D0D0D]">
@@ -72,21 +78,22 @@ export default function AboutTrading() {
               data-aos="fade-up"
             >
               Unlock the secrets of successful trading with T-Stackz Rackz!
-              Whether your new to stocks, options, or crypto, or an experienced
-              trader looking for an edge, our platform provides AI-powered
-              insights, real-time alerts, and expert strategies to help you
-              trade smarter and profit faster. Watch this video to see how
-              T-Stackz Rackz can transform your trading journey!
+              Whether you're new to stocks, options, or crypto, or an
+              experienced trader looking for an edge, our platform provides
+              AI-powered insights, real-time alerts, and expert strategies to
+              help you trade smarter and profit faster. Watch this video to see
+              how T-Stackz Rackz can transform your trading journey!
             </p>
             <button
               className="flex justify-center items-center gap-3 text-[#FFFFFF] text-xs md:text-base font-normal py-2 md:py-3 px-4 md:px-10 bg-[#FD5163] rounded-xl"
               data-aos="fade-up"
+              onClick={handleWatchVideo} // Add this onClick event
             >
               Watch Video <GoArrowRight />
             </button>
           </div>
         </div>
-        <div className="grid  grid-cols-1 md:grid-cols-3 gap-6 ">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {cards.map((card, index) => (
             <div key={index} data-aos="fade-up">
               <AboutTradingCard {...card} />
