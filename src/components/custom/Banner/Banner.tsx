@@ -60,8 +60,7 @@ export default function Banner() {
         <a
           className="bg-gradient-to-r from-[#FA4E60] to-[#DA293B] text-white font-semibold py-3 px-6 flex items-center gap-2 rounded-lg mt-6 hover:scale-105 transition duration-300"
           // href="https://dashboard.mailerlite.com/forms/1447765/151869386929473502/share"
-          href="https://t.me/+RlqFi76FxNI0YzUx"
-          rel="noopener noreferrer"
+          href="https://discord.gg/S2jPeJfXR4"
           target="_blank"
         >
           Yes, I Want Free Trades <GoArrowRight />
