@@ -23,7 +23,7 @@ export default function footer() {
                 <Link
                   className="bg-[#00F5FF] hover:bg-transparent border border-[#00F5FF] p-3 text-xl rounded-full text-[#222629] hover:text-[#00F5FF] inline-block duration-300"
                   target="_blank"
-                  to="https://x.com/realtjohnson74?s=21&t=VQyMO5X9OZWYxqJg716w9w"
+                  to="https://x.com/tstackzrackz"
                 >
                   <FaTwitter />
                 </Link>
